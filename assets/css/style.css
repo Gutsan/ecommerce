@@ -1,0 +1,89 @@
+body{
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+    'header header header header'
+    'menu menu menu menu'
+    'aside main main main'
+    'footer footer footer footer' ;
+}
+
+header{
+    padding: 0;
+    margin: 0;
+    height:5vh;
+    grid-area: header;
+}
+menu{
+    padding: 0;
+    margin: 0;
+    height: 5vh;
+    grid-area: menu;
+}
+aside{
+    padding: 0;
+    margin: 0;
+    height: 85vh;
+    grid-area: aside;
+}
+main{
+    padding: 0;
+    margin: 0;
+    height: 85vh;
+    grid-area: main;
+}
+footer{
+    padding: 0;
+    margin: 0;
+    height: 85vh;
+    grid-area: footer;
+}
+
+.lista-Menu{
+    list-style: none;
+    display: flex;
+    gap: 10px
+}
+
+.card-item{
+    height:20rem;
+    width: 20rem;
+    display: flex;
+    border: solid 1px #000;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+}
+.card-item p{
+padding: 0;
+margin: 0;
+}
+.card-item ul{
+    list-style:none ;
+    }
+.card-img{
+    height: 10rem;
+    width: 15rem;
+    object-fit: contain;
+}
+.card-item a{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.card-boton{
+    width: 80%;
+    height: 2rem;
+    color: #ffffff;
+    background-color: #1447ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.card-boton:hover{
+    background-color: #486fff;
+}
