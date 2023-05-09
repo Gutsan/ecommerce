@@ -1,89 +1,170 @@
-body{
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-areas:
-    'header header header header'
-    'menu menu menu menu'
-    'aside main main main'
-    'footer footer footer footer' ;
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background: rgb(243, 243, 239);
+  background: linear-gradient(
+    118deg,
+    rgba(243, 243, 239, 1) 0%,
+    rgba(207, 207, 207, 1) 100%
+  );
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "menu menu menu menu"
+    "aside main main main"
+    "footer footer footer footer";
 }
 
-header{
-    padding: 0;
-    margin: 0;
-    height:5vh;
-    grid-area: header;
+header {
+  padding: 0;
+  margin: 0;
+  height: 10vh;
+  grid-area: header;
 }
-menu{
-    padding: 0;
-    margin: 0;
-    height: 5vh;
-    grid-area: menu;
+.img-Logo {
+  margin-left: 5px;
+  padding-left: 5px;
 }
-aside{
-    padding: 0;
-    margin: 0;
-    height: 85vh;
-    grid-area: aside;
+.resaltarLogo {
+  color: #fd641d;
+  font-size: 1.5rem;
 }
-main{
-    padding: 0;
-    margin: 0;
-    height: 85vh;
-    grid-area: main;
-}
-footer{
-    padding: 0;
-    margin: 0;
-    height: 85vh;
-    grid-area: footer;
+.input-buscar {
+  list-style: none;
+  display: flex;
+  width: 30rem;
 }
 
-.lista-Menu{
-    list-style: none;
-    display: flex;
-    gap: 10px
+select {
+  border: none;
+  height: 5vh;
+  background-color: #ffffff;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 10px;
+}
+.input-buscar input {
+  border: none;
+  height: 5vh;
+  background-color: #ffffff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 20rem;
 }
 
-.card-item{
-    height:20rem;
-    width: 20rem;
-    display: flex;
-    border: solid 1px #000;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items:center;
+.carro-Compras {
+  height: 10vh;
+  margin: 0;
+  padding: px;
+  width: 10rem;
+  display: grid;
+  justify-content: center;
+  gap: 1px;
+  align-items: center;
+  grid-template-areas:
+    "carro cantidad"
+    "carro precio";
+  background-color: #00000012;
 }
-.card-item p{
-padding: 0;
-margin: 0;
+.carro-Compras p {
+  grid-area: precio;
+  color: #000000;
+  font-weight: bold;
 }
-.card-item ul{
-    list-style:none ;
-    }
-.card-img{
-    height: 10rem;
-    width: 15rem;
-    object-fit: contain;
+.carro-Compras a {
+  color: #000000;
+  grid-area: carro;
 }
-.card-item a{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    color: #ffffff;
+.carro-Compras span {
+  background-color: #fd641d;
+  color: #ffffff;
+  grid-area: cantidad;
+  width: 1rem;
+  vertical-align: top;
+  text-align: center;
+}
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem;
+  align-items: center;
+}
+menu {
+  padding: 0;
+  margin: 0;
+  height: 5vh;
+  background-image: linear-gradient(#000000, #4b4b4b);
+  grid-area: menu;
+}
+aside {
+  padding: 0;
+  margin: 0;
+  height: 85vh;
+  grid-area: aside;
+}
+main {
+  padding: 0;
+  margin: 0;
+  height: 85vh;
+  grid-area: main;
+}
+footer {
+  padding: 0;
+  margin: 0;
+  height: 85vh;
+  grid-area: footer;
 }
 
-.card-boton{
-    width: 80%;
-    height: 2rem;
-    color: #ffffff;
-    background-color: #1447ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
+.lista-Menu {
+  list-style: none;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }
-.card-boton:hover{
-    background-color: #486fff;
+
+.card-item {
+  height: 20rem;
+  width: 20rem;
+  display: flex;
+  border: solid 1px #000;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.card-item p {
+  padding: 0;
+  margin: 0;
+}
+.card-item ul {
+  list-style: none;
+}
+.card-img {
+  height: 10rem;
+  width: 15rem;
+  object-fit: contain;
+}
+.card-item a {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.card-boton {
+  width: 80%;
+  height: 2rem;
+  color: #ffffff;
+  background-color: #1447ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.card-boton:hover {
+  background-color: #486fff;
 }

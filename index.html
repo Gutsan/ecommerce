@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- hoja de estilos css -->
     <link rel="stylesheet" href="assets/css/style.css">
-    
+    <!-- iconos de fontawesome -->
+    <script src="https://kit.fontawesome.com/2227c873c2.js" crossorigin="anonymous"></script>
+
     <title>Louupe</title>
 </head>
+
 <body>
     <header>
-        <p>LOUUPE</p>
+        <div class="navBar">
+            <p class="img-Logo"><span class="resaltarLogo">L</span><i class="fa-solid fa-magnifying-glass"></i>UUPE</p>
+            <div class="input-buscar">
+                <select name="opciones">
+                    <option value="opcion1">Todo</option>
+                    <option value="opcion2">Supermercado</option>
+                    <option value="opcion3">Construcción</option>
+                </select>
+                <input type="search" name="Buscar" id="inp-Buscar" placeholder="Buscar">
+            </div>
+            <div class="carro-Compras">
+                <a href="#"><i class="fa-solid fa-cart-shopping fa-2x"></i></a>
+                <span>3</span>
+                <p>$25.990</p>
+            </div>
+
+        </div>
     </header>
     <menu>
         <ul class="lista-Menu">
@@ -32,13 +52,15 @@
         <div class="container-productos">
             <div class="card-item">
                 <img src="assets/img/imagen1.webp" class="card-img" alt="imagen de producto">
-                  <p class="card-title">Cemento especial 25 kg Polpaico</p>
-                  <p class="card-text">Caracteristicas
+                <div class="card-detalle">
+                    <p class="card-title">Cemento especial 25 kg Polpaico</p>
+                    <p class="card-text">Caracteristicas
                     <ul>
-                      <li>25 kg</li>
-                      <li>17 cm x 36 cm x 32 cm</li>
+                        <li>25 kg</li>
+                        <li>17 cm x 36 cm x 32 cm</li>
                     </ul>
-                  </p>
+                    </p>
+                </div>
                 <div class="card-boton">
                     <a href="#">Comparar</a>
                 </div>
@@ -49,4 +71,5 @@
         <p>footer</p>
     </footer>
 </body>
+
 </html>
