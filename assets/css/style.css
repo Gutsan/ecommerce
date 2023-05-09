@@ -232,7 +232,35 @@ main {
 .card-item:hover .card-iconos:hover i:hover {
   color: #fd641d;
 }
-
+aside{
+  display: flex;
+  flex-direction: column;
+}
+.Categories{
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  height: 70vh;
+  width: 20vw;
+  border:solid 1px #474747 ;
+  padding: 1rem;
+}
+.Categories h3{
+  border-bottom: solid 1px #767575 ;
+  padding-bottom: 1rem;
+}
+.list-Category{
+list-style: circle;
+}
+.item-cat{
+height: 7vh;
+display: flex;
+align-items: center;
+}
+.item-cat:hover{
+  background-color: #fd641d;
+  color: #ffffff;
+}
 footer {
   padding: 0;
   margin: 0;
