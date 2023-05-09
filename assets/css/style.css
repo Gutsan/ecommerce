@@ -16,7 +16,7 @@ body {
     "menu menu menu menu"
     "aside main main main"
     "footer footer footer footer";
-    gap: 5px;
+  gap: 5px;
 }
 /* Cabezera-header */
 header {
@@ -119,7 +119,7 @@ menu {
   align-items: center;
 }
 
-.item-menu{
+.item-menu {
   padding-inline: 5px;
   height: 8vh;
   display: flex;
@@ -141,27 +141,43 @@ main {
   height: 85vh;
   grid-area: main;
 }
-
+.container-productos {
+  display: grid;
+  gap: 10px;
+}
+/* Formato card */
 .card-item {
+  position: relative;
   height: 20rem;
-  width: 20rem;
+  width: 18rem;
   display: flex;
-  border: solid 1px #000;
+  border: solid 1px #474747;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
 }
-.card-item p {
-  padding: 0;
-  margin: 0;
-}
-.card-item ul {
-  list-style: none;
-}
+
 .card-img {
   height: 10rem;
-  width: 15rem;
+  width: 18rem;
   object-fit: contain;
+}
+.card-iconos {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  background-color: #474747;
+  color: #ffffff;
+  justify-content: space-around;
+  opacity: 0;
+}
+.card-iconos i {
+  padding: 10px;
+}
+.card-rating {
+  color: #fd641d;
 }
 .card-item a {
   padding: 0;
@@ -169,22 +185,38 @@ main {
   text-decoration: none;
   color: #ffffff;
 }
-.card-rating{
-  color: #fd641d;
-}
 .card-boton {
-  width: 80%;
+  position: absolute;
+  top: 45%;
+  margin: 10rem;
+  width: 30%;
   height: 2rem;
   color: #ffffff;
-  background-color: #1447ff;
+  background-color: #474747;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
 }
-.card-boton:hover {
-  background-color: #486fff;
+.card-item:hover {
+  border: solid 2px #fd641d;
 }
+.card-item:hover .card-boton {
+  background-color: #f58c5c;
+}
+.card-item:hover .card-boton:hover {
+  background-color: #fd641d;
+}
+.card-item:hover .card-iconos {
+  opacity: 0.5;
+}
+.card-item:hover .card-iconos:hover {
+  opacity: 1;
+}
+.card-item:hover .card-iconos:hover i:hover {
+  color: #fd641d;
+}
+
 footer {
   padding: 0;
   margin: 0;
