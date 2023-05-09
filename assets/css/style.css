@@ -149,11 +149,11 @@ main {
 .card-item {
   position: relative;
   height: 20rem;
-  width: 18rem;
+  width: 15rem;
   display: flex;
   border: solid 1px #474747;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content:space-around;
   align-items: center;
   background-color: #ffffff;
   border-radius: 10px;
@@ -163,9 +163,11 @@ main {
   height: 10rem;
   width: 18rem;
   object-fit: contain;
+  flex-basis:50%;
 }
 .card-iconos {
   position: absolute;
+  top:25%;
   display: flex;
   width: 100%;
   background-color: #474747;
@@ -177,13 +179,23 @@ main {
   padding: 10px;
 }
 .card-rating {
+  flex-basis:10%;
+  color: #fd641d;
+}
+.card-title{
+  flex-basis:20%;
+  font-size: 1rem;
+}
+.card-price{
+  flex-basis:20%;
+  font-size: 1.5rem;
   color: #fd641d;
 }
 .card-item a {
   padding: 0;
   margin: 0;
   text-decoration: none;
-  color: #ffffff;
+  color: #fd641d;
 }
 .card-boton {
   position: absolute;
@@ -191,21 +203,25 @@ main {
   margin: 10rem;
   width: 30%;
   height: 2rem;
-  color: #ffffff;
-  background-color: #474747;
+  color: #fd641d;
+  background-color: #ffffff;
+  border:solid 1px #474747 ;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .card-item:hover {
   border: solid 2px #fd641d;
 }
 .card-item:hover .card-boton {
-  background-color: #f58c5c;
+  border: solid 2px #fd641d;
 }
 .card-item:hover .card-boton:hover {
   background-color: #fd641d;
+}
+.card-item:hover .card-boton:hover a{
+  color: #ffffff;
 }
 .card-item:hover .card-iconos {
   opacity: 0.5;
