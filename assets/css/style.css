@@ -86,6 +86,7 @@ select {
   width: 1rem;
   vertical-align: top;
   text-align: center;
+  border-radius: 100%;
 }
 .navBar {
   display: flex;
@@ -143,7 +144,8 @@ main {
 }
 .container-productos {
   display: grid;
-  gap: 10px;
+  grid-template-columns: auto auto auto;
+  row-gap: 2rem;
 }
 /* Formato card */
 .card-item {
@@ -153,7 +155,7 @@ main {
   display: flex;
   border: solid 1px #474747;
   flex-direction: column;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
   background-color: #ffffff;
   border-radius: 10px;
@@ -163,11 +165,11 @@ main {
   height: 10rem;
   width: 18rem;
   object-fit: contain;
-  flex-basis:50%;
+  flex-basis: 50%;
 }
 .card-iconos {
   position: absolute;
-  top:25%;
+  top: 25%;
   display: flex;
   width: 100%;
   background-color: #474747;
@@ -179,15 +181,15 @@ main {
   padding: 10px;
 }
 .card-rating {
-  flex-basis:10%;
+  flex-basis: 10%;
   color: #fd641d;
 }
-.card-title{
-  flex-basis:20%;
+.card-title {
+  flex-basis: 20%;
   font-size: 1rem;
 }
-.card-price{
-  flex-basis:20%;
+.card-price {
+  flex-basis: 20%;
   font-size: 1.5rem;
   color: #fd641d;
 }
@@ -205,7 +207,7 @@ main {
   height: 2rem;
   color: #fd641d;
   background-color: #ffffff;
-  border:solid 1px #474747 ;
+  border: solid 1px #474747;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -220,7 +222,7 @@ main {
 .card-item:hover .card-boton:hover {
   background-color: #fd641d;
 }
-.card-item:hover .card-boton:hover a{
+.card-item:hover .card-boton:hover a {
   color: #ffffff;
 }
 .card-item:hover .card-iconos {
@@ -232,32 +234,32 @@ main {
 .card-item:hover .card-iconos:hover i:hover {
   color: #fd641d;
 }
-aside{
+aside {
   display: flex;
   flex-direction: column;
 }
-.Categories{
+.Categories {
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
   height: 70vh;
   width: 20vw;
-  border:solid 1px #474747 ;
+  border: solid 1px #474747;
   padding: 1rem;
 }
-.Categories h3{
-  border-bottom: solid 1px #767575 ;
+.Categories h3 {
+  border-bottom: solid 1px #767575;
   padding-bottom: 1rem;
 }
-.list-Category{
-list-style: circle;
+.list-Category {
+  list-style: circle;
 }
-.item-cat{
-height: 7vh;
-display: flex;
-align-items: center;
+.item-cat {
+  height: 7vh;
+  display: flex;
+  align-items: center;
 }
-.item-cat:hover{
+.item-cat:hover {
   background-color: #fd641d;
   color: #ffffff;
 }
