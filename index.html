@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <link rel="favi" href="">
     <link rel="shortcut icon" href="assets/img/favicon-32x32.png" type="Favicon">
-    <title>Louupe | Elige, compra, ahorra.</title>
+    <title>Louup | Elige, compra, ahorra.</title>
 </head>
 
 <body>
@@ -50,6 +50,10 @@
             <li class="item-menu">Otros</li>
         </ul>
     </menu>
+    <section class="hero-section">
+        <h1>Construcción</h1>
+    </section>
+
     <aside>
         <h2>FILTRAR</h2>
         <div class="Categories">
@@ -63,6 +67,36 @@
         </div>
     </aside>
     <main>
+        <div class="seccion-distribucion">
+            <div class="sec-vista">
+                <button class="btn-vista">
+                    <i class="fa-solid fa-list"></i>
+                </button>
+                <button class="btn-vista">
+                    <i class="fa-solid fa-table-cells-large"></i>
+                </button>
+            </div>
+            <div class="sec-ordenPag">
+                <div class="sec-orden">
+                    <p>Ordenar por:</p>
+                    <select name="ordenar" id="list-ordenar">
+                        <option value="opcion1">Recomendado</option>
+                        <option value="opcion2">Precio Menor a Mayor</option>
+                        <option value="opcion3">Precio Mayor a Menor</option>
+                        <option value="opcion4">Marca</option>
+                        <option value="opcion5">Los mejores evaluados</option>
+                    </select>
+                </div>
+                <div class="sec-pag">
+                    <button class="btn-pag">1</button>
+                    <button class="btn-pag">2</button>
+                    <button class="btn-pag">3</button>
+                    <button class="btn-pag">4</button>
+                    <button class="btn-pag">></button>
+
+                </div>
+            </div>
+        </div>
         <div class="container-productos">
             <div class="card-item">
                 <img src="assets/img/imagen1.webp" class="card-img" alt="imagen de producto">
@@ -358,4 +392,5 @@
         </div>
     </footer>
 </body>
+
 </html>
