@@ -254,6 +254,9 @@ aside {
 .list-Category {
   list-style: circle;
 }
+.cant{
+  color: #ff5757;
+}
 .item-cat {
   height: 7vh;
   display: flex;
@@ -263,6 +266,9 @@ aside {
 .item-cat:hover {
   background-color: #f63500;
   color: #ffffff;
+}
+.item-cat:hover .cant{
+  color: #414040;
 }
 /* Pie de Pagina / Footer */
 footer {
@@ -380,6 +386,7 @@ footer {
   padding: 10px;
 }
 .sec-pag{
+
 }
 .btn-pag{
   height: 2rem;
