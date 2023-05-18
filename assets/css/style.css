@@ -5,20 +5,24 @@
 body {
   background: linear-gradient(118deg, #dedede 0%, #ffffff 100%);
   font-family: "Roboto", sans-serif;
+  height: 100vh;
+  width: 100vw;
   display: grid;
+  grid-template-columns:1fr 3fr;
   grid-template-areas:
-    "header header header header"
-    "menu menu menu menu"
-    "hero-section hero-section hero-section hero-section"
-    "aside main main main"
-    "footer footer footer footer";
-  gap: 30px 0px;
+    "header header "
+    "menu menu "
+    "hero-section hero-section"
+    "aside main "
+    "footer footer";
+  gap: 30px;
 }
 /* Cabezera-header */
 header {
   padding: 0;
   margin: 0;
   height: 10vh;
+  width: 100vw;;
   grid-area: header;
 }
 .img-Logo {
@@ -75,6 +79,9 @@ header {
   grid-area: carro;
 }
 .carro-Compras span {
+  position: relative;
+  top:10%;
+  left:-20%;
   background-color: #f63500;
   padding: 3px;
   font-size: 10px;
@@ -87,7 +94,7 @@ header {
 }
 .navBar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0rem;
   align-items: center;
 }
@@ -96,7 +103,8 @@ menu {
   padding: 0;
   margin: 0;
   height: 8vh;
-  background-image: linear-gradient(#000000, #4b4b4b);
+  width: 100vw;;
+  background: linear-gradient(#000000, #4b4b4b);
   grid-area: menu;
   position: sticky;
   top: 0;
@@ -243,6 +251,7 @@ aside {
   flex-direction: column;
   background-color: #ffffff;
   height: 70vh;
+  min-width: fit-content;
   width: 20vw;
   border: solid 1px #dedede;
   padding: 1rem;
@@ -275,20 +284,32 @@ footer {
   padding: 0;
   margin: 0;
   height: 40vh;
+  width: 100vw;
   grid-area: footer;
 }
 .footer1 {
   height: 35vh;
   background-image: linear-gradient(#000000, #4b4b4b);
   color: #dedede;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 'logo cuenta about contacto';
   align-items: center;
 }
 .logo-footer {
+  grid-area: logo;
   height: 20vh;
   width: 20vh;
   border-image: solid #dedede;
+}
+.mi-cuenta{
+  grid-area: cuenta;
+}
+.about{
+  grid-area: about;
+}
+.contacto{
+  grid-area: contacto;
 }
 .s-footer ul {
   list-style: none;
@@ -301,7 +322,7 @@ footer {
   padding-left: 10px;
 }
 .foot-redes {
-  justify-content: space-around;
+  gap:10px
 }
 .s-footer ul li:hover {
   color: #f63500;
@@ -337,7 +358,7 @@ footer {
 .hero-section {
   grid-area: hero-section;
   height: 25vh;
-  width: 100%;
+  width: 100vw;
   background-image: url("../img/hero-back.webp");
   background-size: cover;
   color: #f63500;
@@ -398,4 +419,146 @@ footer {
 .btn-pag:hover{
   background-color:#f63500;
   color: #dedede;
+}
+.solo-movil{
+  display: none;
+}
+/* Media Query para responsive */
+@media(max-width:576px){
+
+body{
+  display: grid;
+  grid-template-rows: 1fr 1fr 3fr 1fr;
+  grid-template-columns: 1fr 9fr;
+  grid-template-areas:
+    'menu header'
+    'hero-section hero-section'
+    'main main'
+    'footer footer';
+    gap:0;
+}
+.no-movil{
+  display: none;
+}
+.solo-movil{
+  display: inherit;
+}
+menu {
+  background: none;
+  height: 10vh;
+  width: 20vw;
+  font-size: 4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:#dedede
+  }
+header{
+  position: sticky;
+  top:0;
+  z-index: 1000;
+  height: 10vh;
+  width: 80vw;
+  background:linear-gradient(118deg, #dedede 0%, #ffffff 100%);
+}
+.navBar{
+  height: 10vh;
+  width: 80vw;
+  justify-content: space-around;
+}
+.img-Logo {
+  height: 10vh;
+  width: 20vh;
+  padding: 0;
+}
+
+.hero-section{
+  height: 10vh;
+}
+.input-buscar input{
+  width: 45vw;
+  height: 3vh;
+  border-radius:10px ;
+  text-align: center;
+}
+
+.carro-Compras {
+  height: 10vh;
+  margin: 0;
+  padding: 0px;
+  width: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background:none;
+}
+.carro-Compras i{
+  font-size: 3vh;
+}
+main {
+width: 100vw;
+height: auto;
+display: flex;
+flex-direction: column;
+gap:0px;
+align-content: start;
+}
+.container-productos {
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+  row-gap: 1.5rem;
+
+}
+.seccion-distribucion {
+  height: auto;
+  margin-bottom: 10%;
+}
+.sec-ordenPag{
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+}
+.sec-orden p {
+  color: #767575;
+  font-size: 1rem;
+}
+#list-ordenar{
+  border: none;
+  height: 5vh;
+  background-color: #dedede;
+  border-radius:10px;
+  padding: 10px;
+}
+.sec-pag{
+
+}
+.btn-pag{
+  height: 4vh;
+  width: 6vw;
+  font-size: 1rem;
+}
+
+footer {
+  padding: 0;
+  margin: 0;
+  z-index: 100;
+  height: 80vh;
+  grid-area: footer;
+}
+.footer1 {
+  height: 60vh;
+  padding-left: 30px;
+  padding-right: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    'logo contacto'
+    'cuenta about';
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
 }

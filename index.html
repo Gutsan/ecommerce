@@ -21,25 +21,29 @@
 <body>
     <header>
         <div class="navBar">
-            <img class="img-Logo" src="assets/img/LOGO.png"></img>
-            <div class="input-buscar">
-                <select name="opciones">
+            <img class="img-Logo" src="assets/img/LOGO.png" alt="Logo"></img>
+            <div class="input-buscar ">
+                <select class="no-movil" name="opciones">
                     <option value="opcion1">Todo</option>
                     <option value="opcion2">Supermercado</option>
                     <option value="opcion3">Construcción</option>
                 </select>
-                <input type="search" name="Buscar" id="inp-Buscar" placeholder="Buscar">
+                <input class="" type="search" name="Buscar" id="inp-Buscar" placeholder="Buscar">
+                
             </div>
             <div class="carro-Compras">
                 <a href="#"><i class="fa-solid fa-cart-shopping fa-2x"></i></a>
-                <span>03</span>
-                <p>$25.990</p>
+                <span class="">03</span>
+                <p class="no-movil">$25.990</p>
             </div>
 
         </div>
     </header>
     <menu>
-        <ul class="lista-Menu">
+        <div class="solo-movil">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="lista-Menu no-movil">
             <li class="item-menu">Supermercado</li>
             <li class="item-menu">Electronica</li>
             <li class="item-menu">Hogar y Jardin</li>
@@ -54,7 +58,7 @@
         <h1>Construcción</h1>
     </section>
 
-    <aside>
+    <aside class="no-movil">
         <h2>FILTRAR</h2>
         <div class="Categories">
             <h3>CATEGORIAS</h3>
@@ -68,7 +72,7 @@
     </aside>
     <main>
         <div class="seccion-distribucion">
-            <div class="sec-vista">
+            <div class="sec-vista   no-movil">
                 <button class="btn-vista">
                     <i class="fa-solid fa-list"></i>
                 </button>
