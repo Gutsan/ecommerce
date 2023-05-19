@@ -4,8 +4,9 @@
 }
 body {
   background: linear-gradient(118deg, #dedede 0%, #ffffff 100%);
+  background-size: contain;
   font-family: "Roboto", sans-serif;
-  height: 100vh;
+  /* height: 100vh; */
   width: 100vw;
   display: grid;
   grid-template-columns:1fr 3fr;
@@ -112,6 +113,7 @@ menu {
 }
 .lista-Menu {
   height: 8vh;
+  /* width: 100vw; */
   list-style: none;
   color: #ffffff;
   display: flex;
@@ -153,7 +155,7 @@ main {
 .card-item {
   position: relative;
   height: 20rem;
-  width: 15rem;
+  width: 20vw;;
   display: flex;
   border: solid 1px #dedede;
   flex-direction: column;
@@ -165,7 +167,7 @@ main {
 }
 .card-img {
   height: 10rem;
-  width: 18rem;
+  width: 20vw;
   padding: 10px;
   object-fit: contain;
   flex-basis: 50%;
@@ -402,7 +404,7 @@ footer {
 #list-ordenar{
   border: none;
   height: 5vh;
-  background-color: #dedede;
+  background-color: #d0d0d0;
   border-radius:10px;
   padding: 10px;
 }
@@ -412,9 +414,9 @@ footer {
 .btn-pag{
   height: 2rem;
   width: 2rem;
-  background-color: #dedede;
+  background-color: #d0d0d0;
   border-radius: 30%;
-  border: none;
+  border:none;
 }
 .btn-pag:hover{
   background-color:#f63500;
@@ -428,7 +430,7 @@ footer {
 
 body{
   display: grid;
-  grid-template-rows: 1fr 1fr 3fr 1fr;
+  /* grid-template-rows: 1fr 1fr 3fr 1fr; */
   grid-template-columns: 1fr 9fr;
   grid-template-areas:
     'menu header'
@@ -455,7 +457,7 @@ menu {
   }
 header{
   position: sticky;
-  top:0;
+  top:0vh;
   z-index: 1000;
   height: 10vh;
   width: 80vw;
@@ -502,6 +504,7 @@ display: flex;
 flex-direction: column;
 gap:0px;
 align-content: start;
+margin-bottom: 100px;
 }
 .container-productos {
   display: grid;
@@ -509,6 +512,13 @@ align-content: start;
   justify-items: center;
   row-gap: 1.5rem;
 
+}
+.card-item {
+  width: 70vw;
+}
+.card-img {
+  height: 10rem;
+  width: 68vw;
 }
 .seccion-distribucion {
   height: auto;
